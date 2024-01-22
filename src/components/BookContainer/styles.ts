@@ -7,7 +7,7 @@ export const Container = styled.main`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 2rem auto;
   `}
 `;

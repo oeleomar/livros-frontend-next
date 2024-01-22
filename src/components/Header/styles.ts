@@ -19,20 +19,20 @@ export const Wrapper = styled.header`
 export const ButtonContainer = styled.div`
   ${() => css`
     display: flex;
+    gap: 1rem;
     
     button {
-      background-color: #64b7cc;
-      border: none;
-      margin: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
       transition: 0.3s;
-      font-family: Inter, sans-serif;
-    }
-
-    bottom:hover {
+      padding: 10px 20px;
+      background-color: #64b7cc;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      
+      &:hover {
       background-color: #a5befa;
+    }
     }
   `}
 `;

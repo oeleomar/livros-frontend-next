@@ -64,6 +64,19 @@ export const Form = styled.form`
       margin-bottom: 20px;
       padding: 3px 10px;
     }
+
+    button {
+      padding: 10px 20px;
+      background-color: #64b7cc;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #5aa5b9;
+      }
+    }
   `}
 `;
 
