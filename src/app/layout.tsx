@@ -16,6 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+        <title>Armazem de livros</title>
+      </head>
       <body className={inter.className} style={{border: 0, margin: 0, boxSizing: 'border-box'}}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>

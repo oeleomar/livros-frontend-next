@@ -1,15 +1,16 @@
 'use client'
-import { useState } from "react";
 import * as S from "./styles";
 
 export type HeaderProps = {
   editState: boolean;
+  setEditState: (editState: boolean) => void;
 };
 
-export const Header = ({ editState  }: HeaderProps) => {
+export const Header = ({ editState, setEditState  }: HeaderProps) => {
 
   const handleEdit = () => {
-    console.log(editState)
+    console.log('cliquei', editState)
+    setEditState(!editState);
   }
 
   return (
