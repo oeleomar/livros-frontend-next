@@ -9,9 +9,24 @@ export const Wrapper = styled.header`
     padding: 20px 2rem;
     border-bottom: 1px solid #eaeaea;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    
     h1 {
       margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
     }
   `}
 `;

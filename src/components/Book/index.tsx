@@ -72,6 +72,7 @@ export const Book = ({book, editState}: BookProps) => {
   return (<>
     <ReactModal isOpen={modalIsOpen} style={customStyles} onRequestClose={() => setIsOpen(false)} ariaHideApp={false}>
       <h2>Editar Livro</h2>
+      <p>Obs: a capa do livro é buscada automaticamente pelo ISBN</p>
       <S.Form onSubmit={handleSubmit}>
         <S.Error>{error}</S.Error>
         <label htmlFor="name">Nome</label>
@@ -94,7 +95,9 @@ export const Book = ({book, editState}: BookProps) => {
     </ReactModal>
     <S.Book>
       {editState && <Tools handleEdit={handleEdit} id={book.id}/>}
-      <Image src='/no_image.jpg' width={200} height={300} alt='No image'/>
+      <Image src={
+        regexISBN.test(book.isbn.replaceAll('-', '')) ?`https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg`: '/no_image.jpg'
+      } width={250} height={200} alt='No image' style={{objectFit: 'cover'}} />
       <S.BookInfo>
         <S.BookTitle>{book.name}</S.BookTitle>
         <div>
@@ -114,7 +117,9 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    padding: '4rem 6rem',
+    padding: '2rem',
+    width: '50%',
+    maxWidth: '500px',
     transform: 'translate(-50%, -50%)',
   },
 };

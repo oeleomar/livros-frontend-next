@@ -54,6 +54,8 @@ export const AddNewBook = ({modalIsOpen, setIsOpen}: AddNewBookProps) => {
   return (
     <ReactModal isOpen={modalIsOpen} style={customStyles} onRequestClose={() => setIsOpen(false)} ariaHideApp={false}>
       <h2>Adicionar um Livro</h2>
+      <p>Obs: a capa do livro é buscada automaticamente pelo ISBN</p>
+      
       <S.Form onSubmit={handleSubmit}>
         <S.Error>{error}</S.Error>
         <label htmlFor="name">Nome</label>
@@ -84,7 +86,9 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    padding: '4rem 6rem',
+    padding: '2rem',
+    width: '50%',
+    maxWidth: '500px',
     transform: 'translate(-50%, -50%)',
   },
 };

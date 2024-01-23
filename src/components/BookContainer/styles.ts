@@ -9,6 +9,7 @@ export const Container = styled.main`
     width: 100%;
     max-width: 1200px;
     margin: 2rem auto;
+    padding-top: 5rem;
   `}
 `;
 

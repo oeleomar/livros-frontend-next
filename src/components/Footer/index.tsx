@@ -38,12 +38,8 @@ export const Footer = ({data, setData}: FooterProps) => {
         {data.meta.currentPage || ""} de {data.meta.totalPages|| ""}
       </S.ActualPage>
       <S.ButtonContainer>
-        {data.meta.totalPages < 0 ? null : (
-          <>
-            <button disabled={data.meta.currentPage === 1 ? true : false} onClick={handlePreviousPage}>Anterior</button>
-            <button disabled={data.meta.currentPage === data.meta.totalPages ? true : false} onClick={handleNextPage}>Próximo</button>
-          </>
-        )}
+        <button disabled={data.meta.currentPage === 1 ? true : false} onClick={handlePreviousPage}>Anterior</button>
+        <button disabled={data.meta.currentPage === data.meta.totalPages ? true : false} onClick={handleNextPage}>Próximo</button>
       </S.ButtonContainer>
     </S.Footer>
   );
