@@ -22,6 +22,7 @@ export const Wrapper = styled.header`
 
     @media (max-width: 768px) {
       flex-direction: column;
+      padding: 10px;
 
       h1 {
         font-size: 2rem;

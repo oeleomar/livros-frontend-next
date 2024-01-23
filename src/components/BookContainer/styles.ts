@@ -10,6 +10,10 @@ export const Container = styled.main`
     max-width: 1200px;
     margin: 2rem auto;
     padding-top: 5rem;
+
+    @media (max-width: 768px) {
+      padding-top: 6rem;
+    }
   `}
 `;
 
