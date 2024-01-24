@@ -1,6 +1,6 @@
 # livros-frontend-next
 
-ISSUE: Para que todos as atualizações estejam sincronizadas é necessário recarregar a página. 
+ISSUE: Para que todas as atualizações estejam sincronizadas é necessário recarregar a página. 
 
 Bem-vindo ao Bookshelf App, um aplicativo Frontend construído em Next.js para gerenciar e guardar livros usando uma API dedicada.
 
