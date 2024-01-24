@@ -19,11 +19,11 @@ export const AddNewBook = ({modalIsOpen, setIsOpen}: AddNewBookProps) => {
     event.preventDefault();
 
     if(name.length < 3) {
-      setError('Nome deve ter no mínimo 3 caracteres')
+      return setError('Nome deve ter no mínimo 3 caracteres')
     } else if (author.length < 3) {
-      setError('Autor deve ter no mínimo 3 caracteres')
+      return setError('Autor deve ter no mínimo 3 caracteres')
     } else if (isbn.length < 10) {
-      setError('ISBN deve ter no mínimo 10 caracteres')
+      return setError('ISBN deve ter no mínimo 10 caracteres')
     } else {
       setError('')
     }
@@ -46,6 +46,7 @@ export const AddNewBook = ({modalIsOpen, setIsOpen}: AddNewBookProps) => {
       }) 
       alert('Livro criado com sucesso')
       setIsOpen(false)
+      setError('')
     }catch(error) {
       alert('Erro ao criar livro, tente novamente mais tarde')
     }

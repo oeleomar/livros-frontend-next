@@ -29,8 +29,6 @@ export default function Home() {
     )
   }
 
-  console.log(data)
-
   return (
   <>
     <Header editState={editState} setEditState={setEditState} setIsOpen={setIsOpen}/>
